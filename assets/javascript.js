@@ -1,10 +1,36 @@
 
-let projects = {'project1': true, 
-'project2': false, 
-'project3': false, 
-'project4': false, 
-'project5': false, 
-'project6': false};
+let projects = {
+    'project1': {
+        name: 'Life Saving Transfusion',
+        state: true,
+        technologies: ['html', 'css', 'javascript']
+    },
+    'project2': {
+        name: 'Star Wars Duel',
+        state: false,
+        technologies: ['html', 'css', 'javascript', 'jquery']
+    },
+    'project3': {
+        name: 'Trivia Game',
+        state: false,
+        technologies: ['html', 'css', 'javascript', 'jquery']
+    },
+    'project4': {
+        name: 'Rock Paper Scissors',
+        state: false,
+        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase']
+    },
+    'project5': {
+        name: 'Gigify',
+        state: false,
+        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase']
+    },
+    'project6': {
+        name: 'Star Wars Duel',
+        state: false,
+        technologies: ['html', 'css', 'javascript', 'jquery']
+    }
+};
 
 let portfolioPosition = 0;
 
@@ -29,31 +55,32 @@ document.addEventListener('click', event => {
 });
 
 function moveCards(direction) {
+    console.log(projects.project1.state);
     let change = false;
-    if(direction === 'right' && projects.project6 !== true) {
+    if(direction === 'right' && projects.project6.state !== true) {
         portfolioPosition -= 650;
         let positioner = `${portfolioPosition.toString()}px`;
         for(let i = 1; i <= Object.keys(projects).length; i++) {
             let cards = document.getElementById(`project${[i]}`);
             let projectCount = `project${[i]}`;
             cards.style.left = positioner;
-            if(projects[projectCount] === true && change === false) {
+            if(projects[projectCount].state === true && change === false) {
                 change = true;
-                projects[projectCount] = false;
-                projects[`project${[i + 1]}`] = true;
+                projects[projectCount].state = false;
+                projects[`project${[i + 1]}`].state = true;
             };
         };
-    } else if(direction === 'left' && projects.project1 !== true) {
+    } else if(direction === 'left' && projects.project1.state !== true) {
         portfolioPosition += 650;
         let positioner = `${portfolioPosition.toString()}px`;
         for(let i = 1; i <= Object.keys(projects).length; i++) {
             let cards = document.getElementById(`project${[i]}`);
             let projectCount = `project${[i]}`;
             cards.style.left = positioner;
-            if(projects[projectCount] === true && change === false) {
+            if(projects[projectCount].state === true && change === false) {
                 change = true;
-                projects[projectCount] = false;
-                projects[`project${[i - 1]}`] = true;
+                projects[projectCount].state = false;
+                projects[`project${[i - 1]}`].state = true;
             };
         };
     };

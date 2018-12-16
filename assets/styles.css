@@ -44,6 +44,7 @@ svg {
     margin: 0px 20px;
     box-shadow: 1rem 1rem 1rem black;
     border-radius: 1rem;
+    overflow: hidden;
 }
 
 
