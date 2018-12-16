@@ -1,0 +1,75 @@
+
+:root {
+    --headings: 'Roboto', sans-serif;
+    --articles: 'Source Sans Pro', sans-serif;
+    font-size: 16pt;
+}
+
+/* === Tags === */
+h2, h3 {
+    font-family: var(--headings);
+}
+
+svg {
+    width: 5%;
+    height: auto
+}
+
+/* === Class === */
+.cards {
+    border-radius: 1rem;
+}
+
+.primary {
+    fill: green;
+}
+
+.secondary {
+    fill: blue;
+}
+
+.section_header {
+    text-align: center;
+}
+
+/* === ID === */
+#bootstrap, #CSS3, #firebase, #HTML5, #JS, #jquery, #node {
+    opacity: .25;
+} 
+
+#card_bin {
+    display: flex;
+    width: 651px;
+    height: 318px;
+    margin: 0px 20px;
+    box-shadow: 1rem 1rem 1rem black;
+    border-radius: 1rem;
+}
+
+
+#card_bin_holder {
+    display: flex;
+    justify-content: center;
+}
+
+#external_links {
+    text-align: right;
+}
+
+#opening_blurb {
+    text-align: center;
+}
+
+#project1, #project2, #project3, #project4, #project5, #project6 {
+    position: relative;
+}
+
+#project2, #project3, #project4, #project5, #project6 {
+    visibility: hidden;
+}
+
+#tech_icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
