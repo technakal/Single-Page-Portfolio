@@ -1,2 +1,4 @@
 Lots of CSS
 Add functionality so that the technologies for a particular protfolio item are highlighted.
+Add a blurb about each project that displays when card is displayed
+

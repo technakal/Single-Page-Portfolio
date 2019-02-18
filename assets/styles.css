@@ -15,6 +15,14 @@ svg {
     height: auto
 }
 
+svg:hover .primary{
+    fill:blue;
+}
+
+svg:hover .secondary {
+    fill: green;
+}
+
 /* === Class === */
 .cards {
     border-radius: 1rem;
@@ -47,7 +55,6 @@ svg {
     overflow: hidden;
 }
 
-
 #card_bin_holder {
     display: flex;
     justify-content: center;
@@ -63,10 +70,7 @@ svg {
 
 #project1, #project2, #project3, #project4, #project5, #project6 {
     position: relative;
-}
-
-#project2, #project3, #project4, #project5, #project6 {
-    visibility: hidden;
+    transition: left 1.5s ease 0s;
 }
 
 #tech_icons {
