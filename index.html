@@ -10,51 +10,61 @@
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+
     <section id="total_content">
         <nav id="navigation">
             <a id="to_the_top">About</a>
             <a id="portfolio">Portfolio</a>
             <a id="contact">Contact</a>
         </nav>
+
+        <!-- The opening card. This includes a brief about blurb -->
         <section id="opening_card">
             <h2 class="section_header">Brant Keener</h2>
-            <h3 id="opening_blurb">I am a Colorado-based full-stack developer with a special interest in clean UI, JavaScript, and backend technologies like Node.js.</h3>
+            <h3 id="opening_blurb">Colorado-based full-stack developer with a special interest in clean UI, JavaScript, Node.js, and MySQL.</h3>
             <section id="external_links">
                 <a id="github" href="https://github.com/BrantKeener" target="_blank"><img id="github_mark" src="assets/images/GitHub-Mark-32px.png" alt="GitHub"></a>
                 <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5" target="_blank"><img id="linkedin_mark" src="assets/images/In-Black-34px-TM.png" alt="LinkedIn"></a>
+                <h4 id="additional_blurb">*Also, seasoned Obstacle Course Runner, and fledgling powerlifter.</h3>
             </section>
         </section>
-        <section id="technologies">
-            <h2 class="section_header">Technologies</h2>
-            <section id="tech_icons">
-                <img id="HTML5" src="assets/images/html.jpg" data-active='true'>
-                <img id="CSS3" src="assets/images/css.jpg" data-active='false'>
-                <img id="JS" src="assets/images/js.jpg" data-active='false'>
-                <img id="bootstrap" src="assets/images/bootstrap-stack.png" data-active='false'>
-                <img id="jquery" src="assets/images/jQuery.png" data-active='false'>
-                <img id="node" src="assets/images/node.png" data-active='false'>
-                <img id="firebase" src="assets/images/firebase.png" data-active='false'>
-            </section>
-        </section>
-        <section id="portfolio_card">
-            <h2 class="section_header">Portfolio</h2>
-            <section id="card_bin_holder">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-arrow-thick-left-circle">
-                    <circle cx="12" cy="12" r="10" class="primary left_arrow"/>
-                    <path class="secondary left_arrow" d="M12 10h5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5v2a1 1 0 0 1-1.7.7l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 12 8v2z"/></svg>
-                <section id="card_bin">
-                    <a id="project1" href="https://tzlomke.github.io/Project_1/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/Gigify.png" alt="Gigify"></a>
-                    <a id="project2" href="https://thawing-ravine-93395.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards"src="assets/images/art_portfolio.PNG" alt="C.J. Frei Artwork"></a>
-                    <a id="project4" href="https://intense-inlet-81081.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/frnd-fndr.PNG" alt="Frnd-Fndr"></a>
-                    <a id="project5" href="https://github.com/BrantKeener/bamazon/blob/master/README.md" target="_blank" style="left: 0px" ><img class="cards" src="assets/images/bamazon.PNG" alt="Bamazon CLI"></a>
-                    <a id="project6" href="https://damp-escarpment-30359.herokuapp.com/" target="_blank" style="left: 0px" ><img class="cards" src="assets/images/burger.PNG" alt="Burger Sequelized"></a>
-                    <a id="project3" href="https://brantkeener.github.io/Word_Guess_Game/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/LifeSavingTransfusion.png"></a>
+
+        <section id="tech_port">
+            <!-- This technology section will be integrated with the portfolio -->
+            <section id="technologies">
+                <h2 class="section_header">Technologies</h2>
+                <section id="tech_icons">
+                    <img id="HTML5" src="assets/images/html.jpg" data-active='true'>
+                    <img id="CSS3" src="assets/images/css.jpg" data-active='false'>
+                    <img id="JS" src="assets/images/js.jpg" data-active='false'>
+                    <img id="bootstrap" src="assets/images/bootstrap-stack.png" data-active='false'>
+                    <img id="jquery" src="assets/images/jQuery.png" data-active='false'>
+                    <img id="node" src="assets/images/node.png" data-active='false'>
+                    <img id="firebase" src="assets/images/firebase.png" data-active='false'>
                 </section>
-                <svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-arrow-thick-right-circle">
-                    <circle cx="12" cy="12" r="10" class="primary right_arrow"/>
-                    <path class="secondary right_arrow" d="M12 14H7a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h5V8a1 1 0 0 1 1.7-.7l4 4a1 1 0 0 1 0 1.4l-4 4A1 1 0 0 1 12 16v-2z"/></svg>
+            </section>
+
+            <section id="portfolio_card">
+                <h2 class="section_header">Portfolio</h2>
+                <section id="card_bin_holder">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-arrow-thick-left-circle">
+                        <circle cx="12" cy="12" r="10" class="primary left_arrow"/>
+                        <path class="secondary left_arrow" d="M12 10h5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5v2a1 1 0 0 1-1.7.7l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 12 8v2z"/></svg>
+                    <section id="card_bin">
+                        <a id="project1" href="https://tzlomke.github.io/Project_1/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/Gigify.png" alt="Gigify"></a>
+                        <a id="project2" href="https://thawing-ravine-93395.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards"src="assets/images/art_portfolio.PNG" alt="C.J. Frei Artwork"></a>
+                        <a id="project3" href="https://intense-inlet-81081.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/frnd-fndr.PNG" alt="Frnd-Fndr"></a>
+                        <a id="project4" href="https://github.com/BrantKeener/bamazon/blob/master/README.md" target="_blank" style="left: 0px" ><img class="cards" src="assets/images/bamazon.PNG" alt="Bamazon CLI"></a>
+                        <a id="project5" href="https://damp-escarpment-30359.herokuapp.com/" target="_blank" style="left: 0px" ><img class="cards" src="assets/images/burger.PNG" alt="Burger Sequelized"></a>
+                        <a id="project6" href="https://brantkeener.github.io/Word_Guess_Game/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/LifeSavingTransfusion.png"></a>
+                    </section>
+                    <svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-arrow-thick-right-circle">
+                        <circle cx="12" cy="12" r="10" class="primary right_arrow"/>
+                        <path class="secondary right_arrow" d="M12 14H7a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h5V8a1 1 0 0 1 1.7-.7l4 4a1 1 0 0 1 0 1.4l-4 4A1 1 0 0 1 12 16v-2z"/></svg>
+                </section>
             </section>
         </section>
+
         <section id="contact_card">
             <h2 class="section_header">Contact</h2>
             <a href="">Email Me</a>

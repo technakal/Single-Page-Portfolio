@@ -5,6 +5,13 @@
     font-size: 16pt;
 }
 
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+
 /* === Tags === */
 h2, h3 {
     font-family: var(--headings);
@@ -38,6 +45,7 @@ svg:hover .secondary {
 
 .section_header {
     text-align: center;
+    font-size: 3rem;
 }
 
 /* === ID === */
@@ -68,6 +76,14 @@ svg:hover .secondary {
     text-align: center;
 }
 
+#opening_card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 95vh;
+    background-color: blue;
+}
+
 #project1, #project2, #project3, #project4, #project5, #project6 {
     position: relative;
     transition: left 1.5s ease 0s;
@@ -77,4 +93,8 @@ svg:hover .secondary {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+#tech_port {
+    height: 100vh;
 }

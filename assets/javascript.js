@@ -1,41 +1,53 @@
 
 let projects = {
     'project1': {
-        name: 'Life Saving Transfusion',
+        name: 'Gigify',
         state: true,
-        technologies: ['html', 'css', 'javascript']
+        technologies: ['html', 'css', 'javascript'],
+        url: 'https://tzlomke.github.io/Project_1/',
+        card_image_link: 'assets/images/Gigify.png',
     },
     'project2': {
-        name: 'Star Wars Duel',
+        name: 'C.J. Frei Art Portfolio',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery']
+        technologies: ['html', 'css', 'javascript', 'jquery'],
+        url: 'https://thawing-ravine-93395.herokuapp.com/',
+        card_image_link: 'assets/images/art_portfolio.PNG'
     },
     'project3': {
-        name: 'Trivia Game',
+        name: 'FRND-FNDR',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery']
+        technologies: ['html', 'css', 'javascript', 'jquery'],
+        url: 'https://intense-inlet-81081.herokuapp.com/',
+        card_image_link: 'assets/images/frnd-fndr.PNG'
     },
     'project4': {
-        name: 'Rock Paper Scissors',
+        name: 'Bamazon',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase']
+        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase'],
+        url: 'https://github.com/BrantKeener/bamazon/blob/master/README.md',
+        card_image_link: 'assets/images/bamazon.PNG'
     },
     'project5': {
-        name: 'Gigify',
+        name: 'Burger Sequelized',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase']
+        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase'],
+        url: 'https://damp-escarpment-30359.herokuapp.com/',
+        card_image_link: 'assets/images/burger.PNG'
     },
     'project6': {
-        name: 'Star Wars Duel',
+        name: 'Life Saving Transfusion',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery']
+        technologies: ['html', 'css', 'javascript', 'jquery'],
+        url: 'https://brantkeener.github.io/Word_Guess_Game/',
+        card_image_link: 'assets/images/LifeSavingTransfusion.png'
     }
 };
 
 let portfolioPosition = 0;
 
 // Ensure that the document is loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
 
     // Event delegator for mouse clicks
     document.addEventListener('click', event => {
