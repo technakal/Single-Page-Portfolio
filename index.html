@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brant Keener</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-    <script src="assets/javascript.js" rel="javascript"></script>
     <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/javascript.js" rel="javascript"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         </section>
         <nav id="navigation">
             <ul>
-                <li><a href="#blurb" class="nav-links">Blurb</a></li>
+                <li><a class="nav-links" href="#blurb">Blurb</a></li>
                 <li><a class="nav-links" href="#about">About</a></li>
                 <li><a class="nav-links" href="#portfolio">Portfolio</a></li>
                 <li><a class="nav-links" href="#contact">Contact</a></li>
@@ -30,38 +31,41 @@
         <a id="blurb"></a>
         <section class="scroll-snap" id="opening_card">
             <h2 class="section_header">Brant Keener</h2>
+            <img class="shadow_it" id="opening_image" src="assets/images/standing_tie.jpg" alt="Standing in a tie">
             <h3 id="opening_blurb">Colorado-based full-stack developer with a special interest in clean UI, JavaScript, and all things server-side.</h3>
-            <section id="external_links">
-                <a id="github" href="https://github.com/BrantKeener" target="_blank"><img id="github_mark" src="assets/images/GitHub-Mark-32px.png" alt="GitHub"></a>
-                <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5" target="_blank"><img id="linkedin_mark" src="assets/images/In-Black-34px-TM.png" alt="LinkedIn"></a>
-                <h4 id="additional_blurb">*Also, seasoned Obstacle Course Runner, and fledgling powerlifter.</h3>
-            </section>
+            <h4 id="additional_blurb">*Also, seasoned Obstacle Course Runner, and fledgling powerlifter.</h3>
         </section>
 
         <!-- Here is a slightly more in depth about section that includes my "brand" -->
-        <a id="about"></a>
         <section class="scroll-snap" id="about_section">
+            <a id="about"></a>
             <h2 class="section_header">About Me</h2>
-            <p class="about_para">
-                    I am a full stack developer who is currently honing his skills in the 
-                    Denver University Coding Bootcamp program. Throughout this program, I have strengthened my skills with 
-                    client-side technologies including HTML, CSS, Bootstrap, JavaScript, and jQuery. In addition, I have gained
-                    skills leveraging server-side technologies including Node.js, express, handlebars, and firebase. 
-                    I have a particular passion in working with, and really understanding JavaScript and Node.js. The creativity that web development 
-                    allows in both Front-End and Back-End web development make for a very rewarding and interesting career.
-                </p>
-                <p class="about_para">
-                    At this time, I am working as a Medical Laboratory Scientist at the University of Colorado Hospital
-                    Anschutz Medical Campus. This work is extremely interesting and rewarding. My current work involves
-                    transfusion medicine, and the transfusion of blood products and their derivatives.
-                </p>
-                <p class="about_para">
-                    I also have my Airframe and Powerplant license with an FCC endorsement. I worked as a civilian
-                    aircraft electrician in both regional and general aviation.
-                </p>
+            <section id="about_flexbox">
+                <img class="shadow_it" id="about_image" src="assets/images/log_carry.jpg" alt="Carrying a log">
+                <section id="paragraphs" class="shadow_it">
+                    <p class="about_para">
+                        I am a full stack developer who is currently honing his skills in the 
+                        Denver University Coding Bootcamp program. Throughout this program, I have strengthened my skills with 
+                        client-side technologies including HTML, CSS, Bootstrap, JavaScript, and jQuery. In addition, I have gained
+                        skills leveraging server-side technologies including Node.js, express, handlebars, and firebase. 
+                        I have a particular passion in working with, and really understanding JavaScript and Node.js. The creativity that web development 
+                        allows in both Front-End and Back-End web development make for a very rewarding and interesting career.
+                    </p>
+                    <p class="about_para">
+                        At this time, I am working as a Medical Laboratory Scientist at the University of Colorado Hospital
+                        Anschutz Medical Campus. This work is extremely interesting and rewarding. My current work involves
+                        transfusion medicine, and the transfusion of blood products and their derivatives.
+                    </p>
+                    <p class="about_para">
+                        I also have my Airframe and Powerplant license with an FCC endorsement. I worked as a civilian
+                        aircraft electrician in both regional and general aviation.
+                    </p>
+                </section>
+            </section>
         </section>
 
         <a id="portfolio"></a>
+        <br>
         <section class="scroll-snap" id="tech_port">
             <!-- This technology section will be integrated with the portfolio -->
             <section id="technologies">
@@ -83,7 +87,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-arrow-thick-left-circle">
                         <circle cx="12" cy="12" r="10" class="primary left_arrow"/>
                         <path class="secondary left_arrow" d="M12 10h5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-5v2a1 1 0 0 1-1.7.7l-4-4a1 1 0 0 1 0-1.4l4-4A1 1 0 0 1 12 8v2z"/></svg>
-                    <section id="card_bin">
+                    <section id="card_bin" class="shadow_it">
                         <a id="project1" href="https://tzlomke.github.io/Project_1/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/Gigify.png" alt="Gigify"></a>
                         <a id="project2" href="https://thawing-ravine-93395.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards"src="assets/images/art_portfolio.PNG" alt="C.J. Frei Artwork"></a>
                         <a id="project3" href="https://intense-inlet-81081.herokuapp.com/" target="_blank" style="left: 0px"><img class="cards" src="assets/images/frnd-fndr.PNG" alt="Frnd-Fndr"></a>
@@ -101,7 +105,13 @@
         <a id="contact"></a>
         <section class="scroll-snap" id="contact_card">
             <h2 class="section_header">Contact</h2>
-            <a href="">Email Me</a>
+                <h3 id="contact_blurb">Please feel free to reach out to me on LinkedIn, or via email. </h3>
+                <h3>Take a look at my GitHub, if you would like to see more.</h3>
+            <section id="external_links">    
+                <a id="github" href="https://github.com/BrantKeener" target="_blank"><img id="github_mark" src="assets/images/GitHub-Mark-32px.png" alt="GitHub"></a>
+                <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5" target="_blank"><img id="linkedin_mark" src="assets/images/In-Black-34px-TM.png" alt="LinkedIn"></a>
+            </section>
+            <a href="mailto:brant.keener@gmail.com"><i class="far fa-envelope"></i></a>
         </section>
     </section>
 </body>
