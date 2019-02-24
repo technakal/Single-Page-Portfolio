@@ -6,22 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brant Keener</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <script src="assets/javascript.js" rel="javascript"></script>
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
-    <section id="total_content">
+    <section id="total-content">
+        <section id="background-intro">
+            <span id="triangle-left"></span>
+            <span id="triangle-right"></span>
+        </section>
         <nav id="navigation">
-            <a id="to_the_top">About</a>
-            <a id="portfolio">Portfolio</a>
-            <a id="contact">Contact</a>
+            <ul>
+                <li><a href="#blurb" class="nav-links">Blurb</a></li>
+                <li><a class="nav-links" href="#about">About</a></li>
+                <li><a class="nav-links" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-links" href="#contact">Contact</a></li>
+            </ul>
         </nav>
 
         <!-- The opening card. This includes a brief about blurb -->
-        <section id="opening_card">
+        <a id="blurb"></a>
+        <section class="scroll-snap" id="opening_card">
             <h2 class="section_header">Brant Keener</h2>
-            <h3 id="opening_blurb">Colorado-based full-stack developer with a special interest in clean UI, JavaScript, Node.js, and MySQL.</h3>
+            <h3 id="opening_blurb">Colorado-based full-stack developer with a special interest in clean UI, JavaScript, and all things server-side.</h3>
             <section id="external_links">
                 <a id="github" href="https://github.com/BrantKeener" target="_blank"><img id="github_mark" src="assets/images/GitHub-Mark-32px.png" alt="GitHub"></a>
                 <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5" target="_blank"><img id="linkedin_mark" src="assets/images/In-Black-34px-TM.png" alt="LinkedIn"></a>
@@ -29,7 +38,31 @@
             </section>
         </section>
 
-        <section id="tech_port">
+        <!-- Here is a slightly more in depth about section that includes my "brand" -->
+        <a id="about"></a>
+        <section class="scroll-snap" id="about_section">
+            <h2 class="section_header">About Me</h2>
+            <p class="about_para">
+                    I am a full stack developer who is currently honing his skills in the 
+                    Denver University Coding Bootcamp program. Throughout this program, I have strengthened my skills with 
+                    client-side technologies including HTML, CSS, Bootstrap, JavaScript, and jQuery. In addition, I have gained
+                    skills leveraging server-side technologies including Node.js, express, handlebars, and firebase. 
+                    I have a particular passion in working with, and really understanding JavaScript and Node.js. The creativity that web development 
+                    allows in both Front-End and Back-End web development make for a very rewarding and interesting career.
+                </p>
+                <p class="about_para">
+                    At this time, I am working as a Medical Laboratory Scientist at the University of Colorado Hospital
+                    Anschutz Medical Campus. This work is extremely interesting and rewarding. My current work involves
+                    transfusion medicine, and the transfusion of blood products and their derivatives.
+                </p>
+                <p class="about_para">
+                    I also have my Airframe and Powerplant license with an FCC endorsement. I worked as a civilian
+                    aircraft electrician in both regional and general aviation.
+                </p>
+        </section>
+
+        <a id="portfolio"></a>
+        <section class="scroll-snap" id="tech_port">
             <!-- This technology section will be integrated with the portfolio -->
             <section id="technologies">
                 <h2 class="section_header">Technologies</h2>
@@ -65,7 +98,8 @@
             </section>
         </section>
 
-        <section id="contact_card">
+        <a id="contact"></a>
+        <section class="scroll-snap" id="contact_card">
             <h2 class="section_header">Contact</h2>
             <a href="">Email Me</a>
         </section>

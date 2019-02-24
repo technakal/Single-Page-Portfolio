@@ -3,14 +3,14 @@ let projects = {
     'project1': {
         name: 'Gigify',
         state: true,
-        technologies: ['html', 'css', 'javascript'],
+        technologies: ['html', 'bulma', 'jquery'],
         url: 'https://tzlomke.github.io/Project_1/',
         card_image_link: 'assets/images/Gigify.png',
     },
     'project2': {
         name: 'C.J. Frei Art Portfolio',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery'],
+        technologies: ['html', 'materialize', 'javascript', 'jquery'],
         url: 'https://thawing-ravine-93395.herokuapp.com/',
         card_image_link: 'assets/images/art_portfolio.PNG'
     },

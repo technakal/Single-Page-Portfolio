@@ -2,19 +2,21 @@
 :root {
     --headings: 'Roboto', sans-serif;
     --articles: 'Source Sans Pro', sans-serif;
+    --name: 'Cinzel', serif;
     font-size: 16pt;
 }
 
-body {
+html, body {
     margin: 0%;
     padding: 0%;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 /* === Tags === */
 h2, h3 {
-    font-family: var(--headings);
+    font-family: var(--name);
 }
 
 svg {
@@ -30,13 +32,38 @@ svg:hover .secondary {
     fill: green;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* === Class === */
+.about_para {
+    padding: 0rem 5rem;
+    font-size: 1.5rem;
+    font-family: var(--articles);
+}
+
 .cards {
     border-radius: 1rem;
 }
 
+.nav-links {
+    text-decoration: none;
+    color: transparent;
+}
+
+.nav-links:hover {
+    text-shadow: none;
+    color: white;
+    cursor: pointer;
+}
+
 .primary {
     fill: green;
+}
+
+.scroll-snap {
+    scroll-snap-align: end;
 }
 
 .secondary {
@@ -46,9 +73,24 @@ svg:hover .secondary {
 .section_header {
     text-align: center;
     font-size: 3rem;
+    margin: 0%;
 }
 
 /* === ID === */
+
+#about_section {
+    height: 100vh;
+    background-color: rgba(245, 116, 10, 0.5);
+}
+
+#background-intro {
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(95, 17, 17, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
+
 #bootstrap, #CSS3, #firebase, #HTML5, #JS, #jquery, #node {
     opacity: .25;
 } 
@@ -68,8 +110,20 @@ svg:hover .secondary {
     justify-content: center;
 }
 
+#contact_card {
+    height: 100vh;
+}
+
 #external_links {
     text-align: right;
+}
+
+#navigation {
+    position: absolute;
+    top: 60%;
+    font-family: var(--name);
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px white;
 }
 
 #opening_blurb {
@@ -80,8 +134,7 @@ svg:hover .secondary {
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
-    height: 95vh;
-    background-color: blue;
+    height: 100vh;
 }
 
 #project1, #project2, #project3, #project4, #project5, #project6 {
@@ -97,4 +150,34 @@ svg:hover .secondary {
 
 #tech_port {
     height: 100vh;
+}
+
+#triangle-left {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 0%;
+    border-top: 200px solid rgba(251, 12, 12, 0.5);
+    border-left: 100px solid transparent;
+    border-bottom: 600px solid rgba(251, 12, 12, 0.5);
+    border-right: 800px solid transparent;
+}
+
+#triangle-right {
+    position: fixed;
+    top: 0%;
+    left: 63%;
+    width: 0%;
+    height: 0%;
+    border-top: 800px solid rgba(251, 12, 12, 0.5);
+    border-left: 600px solid transparent;
+}
+
+#total-content {
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
