@@ -3,42 +3,42 @@ let projects = {
     'project1': {
         name: 'Gigify',
         state: true,
-        technologies: ['html', 'bulma', 'jquery'],
+        technologies: ['html', 'bulma', 'jquery', 'javascript', 'firebase'],
         url: 'https://tzlomke.github.io/Project_1/',
         card_image_link: 'assets/images/Gigify.png',
     },
     'project2': {
         name: 'C.J. Frei Art Portfolio',
         state: false,
-        technologies: ['html', 'materialize', 'javascript', 'jquery'],
+        technologies: ['html', 'materialize', 'javascript', 'jquery', 'sequelize', 'express', 'firebase', 'mysql'],
         url: 'https://thawing-ravine-93395.herokuapp.com/',
         card_image_link: 'assets/images/art_portfolio.PNG'
     },
     'project3': {
         name: 'FRND-FNDR',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery'],
+        technologies: ['html', 'css', 'javascript', 'node.js', 'express'],
         url: 'https://intense-inlet-81081.herokuapp.com/',
         card_image_link: 'assets/images/frnd-fndr.PNG'
     },
     'project4': {
         name: 'Bamazon',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase'],
+        technologies: ['node.js', 'mysql'],
         url: 'https://github.com/BrantKeener/bamazon/blob/master/README.md',
         card_image_link: 'assets/images/bamazon.PNG'
     },
     'project5': {
         name: 'Burger Sequelized',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery', 'firebase'],
+        technologies: ['html', 'css', 'javascript', 'mysql', 'express', 'sequelize', 'handlebars'],
         url: 'https://damp-escarpment-30359.herokuapp.com/',
         card_image_link: 'assets/images/burger.PNG'
     },
     'project6': {
         name: 'Life Saving Transfusion',
         state: false,
-        technologies: ['html', 'css', 'javascript', 'jquery'],
+        technologies: ['html', 'css', 'javascript'],
         url: 'https://brantkeener.github.io/Word_Guess_Game/',
         card_image_link: 'assets/images/LifeSavingTransfusion.png'
     }
