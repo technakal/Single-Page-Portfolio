@@ -201,7 +201,7 @@ ul {
     height: 0%;
     border-top: 200px solid rgba(251, 12, 12, 0.5);
     border-left: 100px solid transparent;
-    border-bottom: 600px solid rgba(251, 12, 12, 0.5);
+    border-bottom: 820px solid rgba(251, 12, 12, 0.5);
     border-right: 800px solid transparent;
 }
 
@@ -211,8 +211,8 @@ ul {
     left: 63%;
     width: 0%;
     height: 0%;
-    border-top: 800px solid rgba(251, 12, 12, 0.5);
-    border-left: 600px solid transparent;
+    border-top: 1000px solid rgba(251, 12, 12, 0.5);
+    border-left: 800px solid transparent;
 }
 
 #total-content {
@@ -221,4 +221,122 @@ ul {
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+}
+
+@media screen and (max-width: 1550px) {
+    #opening_blurb {
+        padding: 0% 5% 0% 20%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .about_para {
+        font-size: 1rem;
+    }
+    #paragraphs {
+        height: 75vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #about_image {
+        width: 250px;
+        height: auto;
+    }
+    #paragraphs {
+        width: 90%;
+        margin-left: 0%;
+    }
+    .section_header {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #about_image {
+        width: 200px;
+        height: auto;
+    }
+    #paragraphs {
+        width: 95%;
+        margin-left: 0%;
+    }
+    #opening_blurb {
+        padding: 0% 5% 0% 30%;
+        font-size: 1rem;
+        text-align: right;
+    }
+    #additional_blurb {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    svg {
+        display: none;
+    }
+    .tech_card {
+        width: 75px;
+        height: 100px;
+    }
+    #about_flexbox {
+        display: inline;
+    }
+    #about_image {
+        display: none;
+    }
+    .about_para {
+        font-size: .8rem;
+    }
+    #card_bin {
+        overflow-x: scroll;
+        margin-top: 10%;
+    }
+    #navigation {
+        font-size: 1rem;
+        top: 20%;
+    }
+    #opening_image{
+        align-self: flex-end;
+        margin-right: 5%;
+    }
+    #paragraphs {
+        width: 60%;
+        margin-left: 30%;
+    }
+    #take_a_look {
+        margin-top: 25%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    #card_bin {
+        width: 550px;
+    }
+    .project_card {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .tech_card {
+        width: 50px;
+        height: 75px;
+    }
+    #navigation {
+        display: none;
+    }
+    #opening_image {
+        align-self: center;
+    }
+    #opening_blurb, #additional_blurb {
+        text-align: center;
+        padding: 0% 2%;
+    }
+    #paragraphs {
+        width: 90%;
+        margin: 0%;
+    }
 }
