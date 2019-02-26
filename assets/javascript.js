@@ -4,7 +4,7 @@ let projects = {
         name: 'Gigify',
         state: true,
         technologies: ['html', 'bulma', 'jquery', 'javascript', 'firebase'],
-        url: 'https://tzlomke.github.io/Project_1/',
+        url: 'https://tzlomke.github.io/gigify/',
         card_image_link: 'assets/images/Gigify.png',
     },
     'project2': {
