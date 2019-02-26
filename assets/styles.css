@@ -321,6 +321,9 @@ ul {
     .project_card {
         width: 550px;
     }
+    p:nth-of-type(3n) {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 550px) {
