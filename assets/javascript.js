@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const moveCards = (direction) => {
-        // Each project has a data-active state. 
+        // The bookend projects have a data-active state. 
         // If this state is true on either of the end cards, it prevents
         // Movement in that direction.
         const startProject = document.getElementById('project0');
@@ -81,9 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const endProject = document.getElementById('project5');
         const endProjActive = endProject.getAttribute('data-active');
         const projectCards = document.getElementsByClassName('project_card');
-        console.log(direction === 'left');
-        console.log(startProjActive !== 'true');
-
+        // Moving to the right sets the left hand bookend data-active to false
         if(direction === 'right' && endProjActive !== 'true') {
             startProject.setAttribute('data-active', false);
             portfolioPosition -= 650;
@@ -91,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let card of projectCards) {
                 card.style.left = positioner;
             };
+        // Moving to the left sets the right hand bookend data-active to false
         } else if(direction === 'left' && startProjActive !== 'true') {
             endProject.setAttribute('data-active', false);
             portfolioPosition += 650;
@@ -99,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.left = positioner;
             };
         };
+        // This evaluation will set either end data-active as true if the parameters are met.
         if(portfolioPosition === 0) {
             startProject.setAttribute('data-active', true);
         };
@@ -126,8 +126,4 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
         };
     });
-
-
-
-
 });
