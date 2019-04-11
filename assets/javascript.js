@@ -45,6 +45,7 @@ let projects = [
 ];
 
 let portfolioPosition = 0;
+let projectNumber = 0;
 
 // Ensure that the document is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,6 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     })();
 
+    (function flipTechCards() {
+        
+    })();
 
     const moveCards = (direction) => {
         // The bookend projects have a data-active state. 
