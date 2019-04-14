@@ -119,13 +119,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             listen = event.target.id;
         };
+        console.log(listen);
         switch(listen) {
-            case 'primary right_arrow':
-            case 'secondary right_arrow':
+            case 'move-right':
+            case 'right-arrow':
             moveCards('right');
             break;
-            case 'primary left_arrow':
-            case 'secondary left_arrow':
+            case 'move-left':
+            case 'left-arrow':
             moveCards('left');
             break;
         };
