@@ -39,6 +39,17 @@ body {
   padding: 0%;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
 h1 {
   color: #EA9515;
   font-size: 7rem;
@@ -64,8 +75,75 @@ h3 {
 
 /* ClassName */
 
+.about-image {
+  border-radius: 1rem;
+  width: 700px;
+}
+
+.about-page-assets {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  color: #EA9515;
+}
+
+.cards {
+  height: 500px;
+}
+
+.contact-blurb {
+  font-size: 3rem;
+}
+
+.flip-to-back {
+  transform: rotateY(180deg);
+  transition: transform 0.8s;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 163px;
+  height: 195px;
+}
+
+.flip-card-inner {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  /* -moz-backface-visibility: hidden; */
+  position: absolute;
+  transform: rotateX(0deg);
+  width: 100%;
+}
+
+.flip-card-front {
+  transform: rotateY(180deg);
+}
+
+.full-page {
+  height: 100vh;
+}
+
 .nav-links {
   padding: 3% 5% 0%;
+}
+
+.orange-text {
+  color: #EA9515;
+}
+
+.paragraph {
+  line-height: calc(1.6rem * 1.5);
 }
 
 /* ID */
@@ -73,13 +151,27 @@ h3 {
 #blurb {
   align-items: center;
   display: flex;
-  height: 100vh;
   justify-content: space-evenly;
 }
 
 #blurb-info {
   align-content: center;
   display: flex;
+}
+
+#card_bin {
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem black;
+  height: 500px;
+  margin: 0px 20px;
+  overflow: hidden;
+  width: 1200px;
+}
+
+#card_bin_holder {
+  display: flex;
+  justify-content: center;
 }
 
 #nav-list {
@@ -89,17 +181,43 @@ h3 {
   justify-content: center;
 }
 
+#paragraphs {
+  /* background-color: #5e6572; */
+  border: 5px solid #5e6572;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  margin-left: 5%;
+  padding: 2%;
+  width: 900px;
+}
+
 #pic-and-nav {
   display: flex;
   flex-direction: row;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
 }
 
 #portfolio-nav {
   padding: 15%;
 }
 
+#project1, #project2, #project3, #project4, #project5, #project6 {
+  position: relative;
+  transition: left 1.5s ease 0s;
+}
+
 #standing_tie {
   border-radius: 50%;
   height: 600px;
   width: auto;
+}
+
+#tech_icons {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
 }
