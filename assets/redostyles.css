@@ -28,15 +28,20 @@
   font-weight: regular;
 }
 
+a {
+  text-decoration: none;
+  color: #EA9515;
+}
+
 body {
+  background-color: #000000;
   margin: 0%;
   padding: 0%;
-  background-color: #000000;
 }
 
 h1 {
   color: #EA9515;
-  font-size: 4rem;
+  font-size: 7rem;
   font-family: "Ailerons";
 }
 
@@ -46,28 +51,55 @@ h2, h3, p {
 
 h2 {
   font-family: "Ailerons";
+  font-size: 3rem;
 }
 
 h3, p {
   font-family: "SpaceGrotesk";
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 /* ClassName */
 
+.nav-links {
+  padding: 3% 5% 0%;
+}
 
 /* ID */
 
 #blurb {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+#blurb-info {
+  align-content: center;
   display: flex;
 }
 
 #nav-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+#pic-and-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+#portfolio-nav {
+  padding: 15%;
 }
 
 #standing_tie {
   border-radius: 50%;
-  padding: 5%;
+  height: 600px;
+  width: auto;
 }
