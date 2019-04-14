@@ -56,3 +56,18 @@ h3, p {
 
 
 /* ID */
+
+#blurb {
+  display: flex;
+}
+
+#nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#standing_tie {
+  border-radius: 50%;
+  padding: 5%;
+}
