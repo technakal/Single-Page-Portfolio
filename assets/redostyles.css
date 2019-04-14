@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk-Light.woff");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk-Regular.woff");
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk-Medium.woff");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Ailerons";
+  src: url("./fonts/Ailerons-Regular.otf");
+  font-weight: regular;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #000000;
+}
+
+h1 {
+  color: #EA9515;
+  font-size: 4rem;
+  font-family: "Ailerons";
+}
+
+h2, h3, p {
+  color: #A9B4C2;
+}
+
+h2 {
+  font-family: "Ailerons";
+}
+
+h3, p {
+  font-family: "SpaceGrotesk";
+}
