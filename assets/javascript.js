@@ -5,42 +5,42 @@ let projects = [
         state: true,
         technologies: ['./assets/images/materialize-icon.png', './assets/images/react-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png', './assets/images/mongo-icon.png', './assets/images/passport-icon.png', './assets/images/redux-icon.png'],
         url: 'http://reinvent-io.herokuapp.com/',
-        card_image_link: 'assets/images/reinvent_cap.PNG'
+        card_image_link: 'assets/images/reinvent-cap.png'
     },
     {
         name: 'Gigify',
         state: false,
         technologies: ['./assets/images/bulma-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/js-icon.png', './assets/images/firebase-icon.png'],
         url: 'https://tzlomke.github.io/gigify/',
-        card_image_link: 'assets/images/Gigify.png',
+        card_image_link: 'assets/images/gigify-cap.png',
     },
     {
         name: 'C.J. Frei Art Portfolio',
         state: false,
         technologies: ['./assets/images/materialize-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/node-icon.png', './assets/images/sequelize-icon.png', './assets/images/express-icon.png', './assets/images/firebase-icon.png', './assets/images/mysql-icon.png'],
         url: 'https://thawing-ravine-93395.herokuapp.com/',
-        card_image_link: 'assets/images/art_portfolio.PNG'
+        card_image_link: 'assets/images/art-port-cap.PNG'
     },
     {
         name: 'FRND-FNDR',
         state: false,
         technologies: ['./assets/images/css-icon.png', './assets/images/html-icon.png', './assets/images/js-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png'],
         url: 'https://intense-inlet-81081.herokuapp.com/',
-        card_image_link: 'assets/images/frnd-fndr.PNG'
+        card_image_link: 'assets/images/frnd-fndr-cap.PNG'
     },
     {
         name: 'Bamazon',
         state: false,
         technologies: ['./assets/images/node-icon.png', './assets/images/mysql-icon.png'],
         url: 'https://github.com/BrantKeener/bamazon/blob/master/README.md',
-        card_image_link: 'assets/images/bamazon.PNG'
+        card_image_link: 'assets/images/bamazon-cap.PNG'
     },
     {
         name: 'Burger Sequelized',
         state: false,
         technologies: ['./assets/images/css-icon.png', './assets/images/handlebars-icon.png', './assets/images/js-icon.png', './assets/images/mysql-icon.png', './assets/images/express-icon.png', './assets/images/sequelize-icon.png'],
         url: 'https://damp-escarpment-30359.herokuapp.com/',
-        card_image_link: 'assets/images/burger.PNG'
+        card_image_link: 'assets/images/burger-seq-cap.PNG'
     }
 ];
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const card = document.getElementsByClassName('flip-card-inner');
         const cards = [...card];
         cards.forEach((card) => {
-            card.classList.toggle('flip-to-back');
+            card.classList.add('flip-to-back');
         });
     };
 
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const deckLane = document.getElementById('tech-icons');
         const currentProj = projects[projectNumber];
         currentProj.technologies.forEach((tech, index) => {
-            console.log(tech);
             const flipCard = document.createElement('div');
             const flipCardInner = document.createElement('div');
             const flipCardFront = document.createElement('div');
@@ -118,10 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
     })();
 
     const moveCards = (direction) => {
-        clearTimeout();
         // The bookend projects have a data-active state. 
         // If this state is true on either of the end cards, it prevents
         // Movement in that direction.
+        const img = document.getElementsByClassName('cards');
+        const imgWidth = img[0].width;
+        const stopWidth = imgWidth * (-5);
         const startProject = document.getElementById('project0');
         const startProjActive = startProject.getAttribute('data-active');
         const endProject = document.getElementById('project5');
@@ -131,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(direction === 'right' && endProjActive !== 'true') {
             techDeckClear();
             startProject.setAttribute('data-active', false);
-            portfolioPosition -= 650;
+            portfolioPosition -= imgWidth;
             projectNumber++;
             let positioner = `${portfolioPosition.toString()}px`;
             for (let card of projectCards) {
@@ -142,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if(direction === 'left' && startProjActive !== 'true') {
             techDeckClear();
             endProject.setAttribute('data-active', false);
-            portfolioPosition += 650;
+            portfolioPosition += imgWidth;
             projectNumber--;
             let positioner = `${portfolioPosition.toString()}px`;
             for (let card of projectCards) {
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(portfolioPosition === 0) {
             startProject.setAttribute('data-active', true);
         };
-        if(portfolioPosition === -3250) {
+        if(portfolioPosition === stopWidth) {
             endProject.setAttribute('data-active', true);
         };
     };
@@ -167,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             listen = event.target.id;
         };
-        console.log(listen);
         switch(listen) {
             case 'move-right':
             case 'right-arrow':
