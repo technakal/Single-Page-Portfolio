@@ -231,7 +231,7 @@ h3 {
   width: auto;
 }
 
-#tech_icons {
+#tech-icons {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
