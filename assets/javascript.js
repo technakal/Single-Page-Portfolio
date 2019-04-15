@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
             imgBack.alt = `Tech Back ${index}`
             imgFront.src = tech;
             imgBack.src = './assets/images/playing_card.png';
+            imgFront.classList.add('flip-it');
+            imgBack.classList.add('flip-it');
             flipCardFront.appendChild(imgFront);
             flipCardBack.appendChild(imgBack);
             flipCardInner.appendChild(flipCardFront);
@@ -251,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cardWidth = document.getElementById('card_bin').offsetWidth;
         const xPosition = document.getElementsByClassName('cards')[0].x;
         if(window.innerWidth <= 1150) {
+            document.getElementById('desc-div').style.opacity = 1;
             if(xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .75))) {
                 projectNumber = 0;
                 techDeckClear();

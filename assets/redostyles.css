@@ -283,6 +283,10 @@ header {
     overflow: hidden;
     width: 1000px;
   }
+
+  #desc-div {
+    max-width: 950px;
+  }
   
   .cards {
     max-width: 1000px;
@@ -316,6 +320,10 @@ header {
     overflow-x: scroll;
     width: 800px;
   }
+
+  #desc-div {
+    max-width: 760px;
+  }
   
 }
 
@@ -347,5 +355,121 @@ header {
 
   #standing_tie {
     height: 400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  header {
+    display: block;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .cards {
+    max-width: 700px;
+  }
+
+  .flip-it {
+    height: 75%;
+  }
+
+  #blurb {
+    display: block;
+    text-align: center;
+  }
+  
+  #card_bin {
+    overflow-x: scroll;
+    width: 700px;
+  }
+
+  #desc-div {
+    max-width: 665px;
+    top: 40%;
+  }
+
+  #paragraphs {
+    margin: 2%;
+    line-height: calc(1.5rem * 1.5);
+  }
+
+  #pic-and-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  #standing_tie {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .flip-it {
+    height: 50%;
+  }
+
+  #card_bin {
+    overflow-x: scroll;
+    width: 550px;
+  }
+
+  #desc-div {
+    max-width: 530px;
+    top: 30%;
+  }
+
+  .cards {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flip-it {
+    height: 25%;
+  }
+
+  #card_bin {
+    overflow-x: scroll;
+    width: 500px;
+  }
+
+  #desc-div {
+    max-width: 475px;
+    top: 30%;
+  }
+
+  .cards {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p {
+    font-size: 1rem;
+  }
+
+  #card_bin {
+    overflow-x: scroll;
+    width: 400px;
+  }
+
+  #desc-div {
+    max-width: 350px;
+    top: 30%;
+  }
+
+  .cards {
+    max-width: 400px;
   }
 }
