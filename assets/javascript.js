@@ -228,22 +228,22 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('scroll', () => {
         const yOffset = window.pageYOffset;
         const height = window.innerHeight;
-        if(yOffset > height - 10) {
+        if(yOffset > height - 250) {
             document.getElementById('about-nav').style.opacity = 1;
         };
-        if(yOffset > (height * 2) - 10) {
+        if(yOffset > (height * 2) - 250) {
             document.getElementById('portfolio-sub-nav').style.opacity = 1;
         }; 
-        if(yOffset > (height * 3) - 10) {
+        if(yOffset > (height * 3) - 250) {
             document.getElementById('contact-nav').style.opacity = 1;
         };
-        if(yOffset < height - 10) {
+        if(yOffset < height - 250) {
             document.getElementById('about-nav').style.opacity = 0;
         };
-        if(yOffset < (height * 2) - 10) {
+        if(yOffset < (height * 2) - 250) {
             document.getElementById('portfolio-sub-nav').style.opacity = 0;
         }; 
-        if(yOffset < (height * 3) - 10) {
+        if(yOffset < (height * 3) - 250) {
             document.getElementById('contact-nav').style.opacity = 0;
         };
     });
