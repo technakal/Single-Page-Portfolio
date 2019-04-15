@@ -100,16 +100,9 @@ header {
   max-height: auto;
 }
 
-/* .cards:hover #desc-div {
-  opacity: 1;
-} */
-
-.contact-blurb {
-  text-align: center;
-}
-
 .contact-blurb {
   font-size: 3rem;
+  text-align: center;
 }
 
 .external-links {
@@ -273,4 +266,86 @@ header {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1500px) {
+  p {
+    font-size: 1.3rem;
+  }
+
+  .paragraph {
+    line-height: calc(1.3rem * 1.5);
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  #card_bin {
+    overflow: hidden;
+    width: 1000px;
+  }
+  
+  .cards {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .contact-blurb {
+    font-size: 2rem;
+  }
+
+  #standing_tie {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .cards {
+    max-width: 800px;
+  }
+
+  .port-button {
+    display: none;
+  }
+
+  #card_bin {
+    overflow-x: scroll;
+    width: 800px;
+  }
+  
+}
+
+
+@media screen and (max-width: 1050px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+  
+  .contact-blurb {
+    font-size: 1.7rem;
+  }
+
+  .paragraph {
+    line-height: calc(1rem * 1.5);
+  }
+
+  #standing_tie {
+    height: 400px;
+  }
 }

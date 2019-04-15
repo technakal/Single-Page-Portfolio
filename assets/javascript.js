@@ -225,23 +225,57 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll event listener
     document.addEventListener('scroll', () => {
         const yOffset = window.pageYOffset;
-        if(yOffset > 1005) {
+        const height = window.innerHeight;
+        if(yOffset > height - 5) {
             document.getElementById('about-nav').style.opacity = 1;
         };
-        if(yOffset > 2011) {
+        if(yOffset > (height * 2) - 5) {
             document.getElementById('portfolio-sub-nav').style.opacity = 1;
         }; 
-        if(yOffset > 3017) {
+        if(yOffset > (height * 3) - 5) {
             document.getElementById('contact-nav').style.opacity = 1;
         };
-        if(yOffset < 1005) {
+        if(yOffset < height - 5) {
             document.getElementById('about-nav').style.opacity = 0;
         };
-        if(yOffset < 2011) {
+        if(yOffset < (height * 2) - 5) {
             document.getElementById('portfolio-sub-nav').style.opacity = 0;
         }; 
-        if(yOffset < 3017) {
+        if(yOffset < (height * 3) - 5) {
             document.getElementById('contact-nav').style.opacity = 0;
         };
+    });
+
+    document.getElementById('card_bin').addEventListener('scroll', () => {
+        const xOffset = document.getElementById('card_bin').offsetLeft;
+        const cardWidth = document.getElementById('card_bin').offsetWidth;
+        const xPosition = document.getElementsByClassName('cards')[0].x;
+        if(window.innerWidth <= 1150) {
+            if(xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .75))) {
+                projectNumber = 0;
+                techDeckClear();
+                techDeckBuild();
+            } else if(xOffset - (cardWidth * .75) && xPosition >= (xOffset - (cardWidth * 1.5))) {
+                projectNumber = 1;
+                techDeckClear();
+                techDeckBuild();
+            } else if(xOffset - (cardWidth * 1.5) && xPosition >= (xOffset - (cardWidth * 2.25))) {
+                projectNumber = 2;
+                techDeckClear();
+                techDeckBuild();
+            } else if(xOffset - (cardWidth * 2.25) && xPosition >= (xOffset - (cardWidth * 3))) {
+                projectNumber = 3;
+                techDeckClear();
+                techDeckBuild();
+            } else if(xOffset - (cardWidth * 3) && xPosition >= (xOffset - (cardWidth * 3.75))) {
+                projectNumber = 4;
+                techDeckClear();
+                techDeckBuild();
+            } else if(xOffset - (cardWidth * 3.75) && xPosition >= (xOffset - (cardWidth * 4.5))) {
+                projectNumber = 5;
+                techDeckClear();
+                techDeckBuild();
+            };
+        }
     });
 });
