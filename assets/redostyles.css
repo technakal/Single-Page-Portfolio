@@ -466,8 +466,11 @@ header {
   }
 
   #desc-div {
-    max-width: 350px;
-    top: 30%;
+    display: none;
+  }
+
+  #technologies {
+    display: none;
   }
 
   .cards {
