@@ -221,4 +221,28 @@ document.addEventListener('DOMContentLoaded', function() {
         let descDiv = document.getElementById('desc-div');
         descDiv.style.opacity = 0;
     });
+
+    // Scroll event listener
+    document.addEventListener('scroll', () => {
+        const yOffset = window.pageYOffset;
+        console.log(yOffset);
+        if(yOffset > 1005) {
+            document.getElementById('about-nav').style.opacity = 1;
+        };
+        if(yOffset > 2011) {
+            document.getElementById('portfolio-sub-nav').style.opacity = 1;
+        }; 
+        if(yOffset > 3017) {
+            document.getElementById('contact-nav').style.opacity = 1;
+        };
+        if(yOffset < 1005) {
+            document.getElementById('about-nav').style.opacity = 0;
+        };
+        if(yOffset < 2011) {
+            document.getElementById('portfolio-sub-nav').style.opacity = 0;
+        }; 
+        if(yOffset < 3017) {
+            document.getElementById('contact-nav').style.opacity = 0;
+        };
+    });
 });
