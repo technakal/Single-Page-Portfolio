@@ -479,7 +479,7 @@ header {
 
 @media screen and (max-width: 500px) {
   html {
-    padding-left: 5%;
+    padding-left: 15%;
   }
 
   p {
@@ -487,7 +487,7 @@ header {
   }
 
   #blurb {
-    height: 850px;
+    height: 1000px;
   }
 
   #card_bin {
