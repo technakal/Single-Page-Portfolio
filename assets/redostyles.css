@@ -485,6 +485,10 @@ header {
     width: 400px;
   }
 
+  #about-nav, #portfolio-sub-nav, #contact-nav {
+    width: 300px;
+  }
+
 /* disabled for now. Does not seem to work on very small screens */
 
   #desc-div {
