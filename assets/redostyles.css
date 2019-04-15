@@ -457,7 +457,7 @@ header {
 
 @media screen and (max-width: 500px) {
   p {
-    font-size: 1rem;
+    font-size: .75rem;
   }
 
   #card_bin {

@@ -254,27 +254,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const xPosition = document.getElementsByClassName('cards')[0].x;
         if(window.innerWidth <= 1150) {
             document.getElementById('desc-div').style.opacity = 1;
-            if(xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .75))) {
+            if(xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .9))) {
                 projectNumber = 0;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * .75) && xPosition >= (xOffset - (cardWidth * 1.5))) {
+            } else if(xOffset - (cardWidth * .9) && xPosition >= (xOffset - (cardWidth * 1.8))) {
                 projectNumber = 1;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 1.5) && xPosition >= (xOffset - (cardWidth * 2.25))) {
+            } else if(xOffset - (cardWidth * 1.8) && xPosition >= (xOffset - (cardWidth * 3.1))) {
                 projectNumber = 2;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 2.25) && xPosition >= (xOffset - (cardWidth * 3))) {
+            } else if(xOffset - (cardWidth * 3.1) && xPosition >= (xOffset - (cardWidth * 4.2))) {
                 projectNumber = 3;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 3) && xPosition >= (xOffset - (cardWidth * 3.75))) {
+            } else if(xOffset - (cardWidth * 4.2) && xPosition >= (xOffset - (cardWidth * 5.3))) {
                 projectNumber = 4;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 3.75) && xPosition >= (xOffset - (cardWidth * 4.5))) {
+            } else if(xOffset - (cardWidth * 5.3) && xPosition >= (xOffset - (cardWidth * 6))) {
                 projectNumber = 5;
                 techDeckClear();
                 techDeckBuild();
