@@ -177,7 +177,7 @@ header {
 /* ID */
 
 #about-nav, #portfolio-sub-nav, #contact-nav {
-  padding: 1% 5% 0% 0%;
+  padding: 5% 5% 0% 0%;
   width: 200px;
   opacity: 0;
   transition: opacity .5s ease-in-out;
