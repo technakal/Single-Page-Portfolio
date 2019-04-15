@@ -5,7 +5,8 @@ let projects = [
         state: true,
         technologies: ['./assets/images/materialize-icon.png', './assets/images/react-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png', './assets/images/mongo-icon.png', './assets/images/passport-icon.png', './assets/images/redux-icon.png'],
         url: 'http://reinvent-io.herokuapp.com/',
-        card_image_link: 'assets/images/reinvent-cap.png'
+        card_image_link: 'assets/images/reinvent-cap.png',
+        description: 'Re:invent seeks to bring ideas from the ground up by giving an open platform for idea discussion and maturation. Not only does it give employees a voice, but it gives employers the tools with which to hear that voice.'
     },
     {
         name: 'Gigify',
@@ -13,34 +14,39 @@ let projects = [
         technologies: ['./assets/images/bulma-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/js-icon.png', './assets/images/firebase-icon.png'],
         url: 'https://tzlomke.github.io/gigify/',
         card_image_link: 'assets/images/gigify-cap.png',
+        description: 'Gigify seeks to aid users in finding touring dates for their favorite bands by using Spotify\'s "affinity data". "Affinity data" is then given to Bandsintown to find live shows.'
     },
     {
         name: 'C.J. Frei Art Portfolio',
         state: false,
         technologies: ['./assets/images/materialize-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/node-icon.png', './assets/images/sequelize-icon.png', './assets/images/express-icon.png', './assets/images/firebase-icon.png', './assets/images/mysql-icon.png'],
         url: 'https://thawing-ravine-93395.herokuapp.com/',
-        card_image_link: 'assets/images/art-port-cap.PNG'
+        card_image_link: 'assets/images/art-port-cap.PNG',
+        description: 'Visual artist C.J. Frei required a streamlined protfolio for his digital art. The Art Portfolio provided him just that.'
     },
     {
         name: 'FRND-FNDR',
         state: false,
         technologies: ['./assets/images/css-icon.png', './assets/images/html-icon.png', './assets/images/js-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png'],
         url: 'https://intense-inlet-81081.herokuapp.com/',
-        card_image_link: 'assets/images/frnd-fndr-cap.PNG'
+        card_image_link: 'assets/images/frnd-fndr-cap.PNG',
+        description: 'The modern life can make it difficult to find friends. Frnd-Fndr is here to help through its matching survey. Although, admittedly, non of these friends actually exist.'
     },
     {
         name: 'Bamazon',
         state: false,
         technologies: ['./assets/images/node-icon.png', './assets/images/mysql-icon.png'],
         url: 'https://github.com/BrantKeener/bamazon/blob/master/README.md',
-        card_image_link: 'assets/images/bamazon-cap.PNG'
+        card_image_link: 'assets/images/bamazon-cap.PNG',
+        description: 'There aren\'t enough CLI marketplaces in the world. Bamazon is here to meet all your CLI marketplace needs.'
     },
     {
         name: 'Burger Sequelized',
         state: false,
         technologies: ['./assets/images/css-icon.png', './assets/images/handlebars-icon.png', './assets/images/js-icon.png', './assets/images/mysql-icon.png', './assets/images/express-icon.png', './assets/images/sequelize-icon.png'],
         url: 'https://damp-escarpment-30359.herokuapp.com/',
-        card_image_link: 'assets/images/burger-seq-cap.PNG'
+        card_image_link: 'assets/images/burger-seq-cap.PNG',
+        description: 'After a hard day surfing the web, enter the name of a burger, and virtually eat it. See which burgers have been eaten by you or others.'
     }
 ];
 
@@ -56,6 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
         cards.forEach((card) => {
             card.classList.add('flip-to-back');
         });
+    };
+    
+    const descCardBuild = (proj) => {
+        const descDiv = document.getElementById('desc-div');
+        while(descDiv.firstChild) {
+            descDiv.removeChild(descDiv.firstChild);
+        }
+        const descPara = document.createElement('p');
+        descPara.classList.add('white-text');
+        descPara.textContent = proj.description;
+        descDiv.appendChild(descPara);
     };
 
     const techDeckBuild = () => {
@@ -83,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             flipCard.appendChild(flipCardInner);
             deckLane.appendChild(flipCard);
         });
+        descCardBuild(currentProj);
         setTimeout(flipTechCards, 1500);
     };
 
@@ -91,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
         while(techArea.firstChild) {
             techArea.removeChild(techArea.firstChild);
         };
-    }
+    };
 
     (cardDeckBuild = () => {
         const cardBin = document.getElementById('card_bin');
@@ -178,5 +196,17 @@ document.addEventListener('DOMContentLoaded', function() {
             moveCards('left');
             break;
         };
+    });
+
+    // Event handler for mouseenter
+    document.getElementById('card_bin').addEventListener('mouseenter', () => {
+        let descDiv = document.getElementById('desc-div');
+        descDiv.style.opacity = 1;
+    });
+
+    // Event handler for mouseleave
+    document.getElementById('card_bin').addEventListener('mouseleave', () => {
+        let descDiv = document.getElementById('desc-div');
+        descDiv.style.opacity = 0;
     });
 });

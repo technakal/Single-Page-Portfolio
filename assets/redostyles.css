@@ -95,6 +95,10 @@ h3 {
   max-height: auto;
 }
 
+/* .cards:hover #desc-div {
+  opacity: 1;
+} */
+
 .contact-blurb {
   text-align: center;
 }
@@ -190,6 +194,18 @@ h3 {
 #card_bin_holder {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+#desc-div {
+  background-color: #5e6572;
+  font-size: 2rem;
+  max-width: 1125px;
+  opacity: 0;
+  padding: 0% 2%;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #nav-list {
