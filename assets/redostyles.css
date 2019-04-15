@@ -486,6 +486,10 @@ header {
     font-size: .75rem;
   }
 
+  #blurb {
+    height: 850px;
+  }
+
   #card_bin {
     width: 400px;
   }
