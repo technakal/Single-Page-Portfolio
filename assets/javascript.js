@@ -209,4 +209,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let descDiv = document.getElementById('desc-div');
         descDiv.style.opacity = 0;
     });
+
+    // Event handler for mouseenter
+    document.getElementById('desc-div').addEventListener('mouseenter', () => {
+        let descDiv = document.getElementById('desc-div');
+        descDiv.style.opacity = 1;
+    });
+
+    // Event handler for mouseleave. This one allow desc-div to disappear if the user leaves desc-div from the side.
+    document.getElementById('desc-div').addEventListener('mouseleave', () => {
+        let descDiv = document.getElementById('desc-div');
+        descDiv.style.opacity = 0;
+    });
 });
