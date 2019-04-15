@@ -46,7 +46,7 @@ let projects = [
         technologies: ['./assets/images/css-icon.png', './assets/images/handlebars-icon.png', './assets/images/js-icon.png', './assets/images/mysql-icon.png', './assets/images/express-icon.png', './assets/images/sequelize-icon.png'],
         url: 'https://damp-escarpment-30359.herokuapp.com/',
         card_image_link: 'assets/images/burger-seq-cap.PNG',
-        description: 'After a hard day surfing the web, enter the name of a burger, and virtually eat it. See which burgers have been eaten by you or others.'
+        description: 'This burger app works to take away those virtual hunger pangs, enter the name of a burger, and virtually eat it. See which burgers have been eaten by you or others.'
     }
 ];
 

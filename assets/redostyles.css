@@ -74,6 +74,11 @@ h3 {
   font-size: 1.5rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ClassName */
 
 .about-image {
@@ -152,12 +157,24 @@ h3 {
   width: 100vw;
 }
 
+.lower-nav {
+  background-color: #EA9515;
+  border-radius: .2rem;
+  color: #000000;
+  padding: 5%;
+}
+
 .nav-links {
   padding: 3% 5% 0%;
 }
 
 .orange-text {
   color: #EA9515;
+}
+
+.other-than-blurb-nav {
+  padding: 1% 5% 0% 0%;
+  width: 200px;
 }
 
 .paragraph {
