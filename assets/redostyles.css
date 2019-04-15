@@ -502,4 +502,8 @@ header {
   .cards {
     max-width: 400px;
   }
+
+  .external-links {
+    height: 200px;
+  }
 }
