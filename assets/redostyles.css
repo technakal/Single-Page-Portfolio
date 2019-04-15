@@ -486,7 +486,7 @@ header {
   }
 
   #about-nav, #portfolio-sub-nav, #contact-nav {
-    width: 300px;
+    width: 500px;
   }
 
 /* disabled for now. Does not seem to work on very small screens */
