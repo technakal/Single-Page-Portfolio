@@ -38,6 +38,7 @@ body {
   margin: 0%;
   padding: 0%;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 button {
@@ -505,5 +506,9 @@ header {
 
   .external-links {
     height: 200px;
+  }
+
+  .lower-nav {
+    padding: 1%;
   }
 }
