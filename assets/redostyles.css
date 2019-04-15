@@ -303,6 +303,10 @@ header {
     font-size: 2rem;
   }
 
+  #nav-list {
+    font-size: 2rem;
+  }
+
   #standing_tie {
     height: 450px;
   }
@@ -391,7 +395,6 @@ header {
   }
   
   #card_bin {
-    overflow-x: scroll;
     width: 700px;
   }
 
@@ -421,7 +424,6 @@ header {
   }
 
   #card_bin {
-    overflow-x: scroll;
     width: 550px;
   }
 
@@ -430,18 +432,37 @@ header {
     top: 30%;
   }
 
+  #standing_tie {
+    height: 250px;
+  }
+
   .cards {
     max-width: 550px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .fa-9x {
+    font-size: 4rem;
+  }
+
   .flip-it {
     height: 25%;
   }
 
   #card_bin {
-    overflow-x: scroll;
     width: 500px;
   }
 
@@ -461,9 +482,10 @@ header {
   }
 
   #card_bin {
-    overflow-x: scroll;
     width: 400px;
   }
+
+/* disabled for now. Does not seem to work on very small screens */
 
   #desc-div {
     display: none;
