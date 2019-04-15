@@ -478,6 +478,10 @@ header {
 }
 
 @media screen and (max-width: 500px) {
+  html {
+    padding-left: 5%;
+  }
+
   p {
     font-size: .75rem;
   }
