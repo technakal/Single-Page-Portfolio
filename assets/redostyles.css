@@ -94,7 +94,18 @@ h3 {
 }
 
 .contact-blurb {
+  text-align: center;
+}
+
+.contact-blurb {
   font-size: 3rem;
+}
+
+.external-links {
+  align-items: flex-end;
+  display: flex;
+  height: 450px;
+  justify-content: space-evenly;
 }
 
 .flip-to-back {
@@ -144,6 +155,10 @@ h3 {
 
 .paragraph {
   line-height: calc(1.6rem * 1.5);
+}
+
+.port-head, .text-head {
+  margin-bottom: 0%;
 }
 
 /* ID */
