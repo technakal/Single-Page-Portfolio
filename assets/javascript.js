@@ -225,7 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll event listener
     document.addEventListener('scroll', () => {
         const yOffset = window.pageYOffset;
-        console.log(yOffset);
         if(yOffset > 1005) {
             document.getElementById('about-nav').style.opacity = 1;
         };
