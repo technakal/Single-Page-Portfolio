@@ -1,20 +1,20 @@
 
 let projects = [
     {
-        name: 'Re:invent',
-        state: true,
-        technologies: ['./assets/images/materialize-icon.png', './assets/images/react-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png', './assets/images/mongo-icon.png', './assets/images/passport-icon.png', './assets/images/redux-icon.png'],
-        url: 'http://reinvent-io.herokuapp.com/',
-        card_image_link: 'assets/images/reinvent-cap.PNG',
-        description: 'Re:invent seeks to bring ideas from the ground up by giving an open platform for idea discussion and maturation. Not only does it give employees a voice, but it gives employers the tools with which to hear that voice.'
-    },
-    {
         name: 'Gigify',
         state: false,
         technologies: ['./assets/images/bulma-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/js-icon.png', './assets/images/firebase-icon.png'],
         url: 'https://tzlomke.github.io/gigify/',
         card_image_link: 'assets/images/gigify-cap.PNG',
         description: 'Gigify seeks to aid users in finding touring dates for their favorite bands by using Spotify\'s "affinity data". "Affinity data" is then given to Bandsintown to find live shows.'
+    },
+    {
+        name: 'Re:invent',
+        state: true,
+        technologies: ['./assets/images/materialize-icon.png', './assets/images/react-icon.png', './assets/images/node-icon.png', './assets/images/express-icon.png', './assets/images/mongo-icon.png', './assets/images/passport-icon.png', './assets/images/redux-icon.png'],
+        url: 'http://reinvent-io.herokuapp.com/',
+        card_image_link: 'assets/images/reinvent-cap.PNG',
+        description: 'Re:invent seeks to bring ideas from the ground up by giving an open platform for idea discussion and maturation. Not only does it give employees a voice, but it gives employers the tools with which to hear that voice.'
     },
     {
         name: 'C.J. Frei Art Portfolio',
