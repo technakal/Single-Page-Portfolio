@@ -146,9 +146,12 @@ header {
   transform: rotateY(180deg);
 }
 
+/* Broke on all but the largest of screens */
+
 .full-page {
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
+  margin-left: 2%;
 }
 
 .lower-nav {
@@ -270,6 +273,22 @@ header {
   justify-content: space-evenly;
 }
 
+@media screen and (max-width: 1625px) {
+
+  .full-page {
+    height: auto;
+  }
+
+  .paragraph {
+    line-height: calc(1.3rem * 1.5);
+  }
+
+  #paragraphs {
+    font-size: 1.3rem;
+  }
+
+}
+
 @media screen and (max-width: 1500px) {
   p {
     font-size: 1.3rem;
@@ -278,6 +297,8 @@ header {
   .paragraph {
     line-height: calc(1.3rem * 1.5);
   }
+
+
 }
 
 @media screen and (max-width: 1380px) {
@@ -406,7 +427,6 @@ header {
 
   #paragraphs {
     margin: 2%;
-    line-height: calc(1.5rem * 1.5);
   }
 
   #pic-and-nav {
