@@ -1,126 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BK Portfolio</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/redostyles.css" />
-  <script src="assets/javascript.js" rel="javascript"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
 
   <!-- Opening card -->
-  <section class="full-page" id="blurb">
-    <section id="blurb_info">
-      <header>
-        <h1>Brant Keener</h1>
-      </header>
-      <section>
-        <h2>Full Stack Web Developer</h2>
-        <h3>Special interest in clean UI, JavaScript, and all things server-side.</h3>
-        <p>(Also seasoned mudrunner, and fledgling powerlifter)</p>
-      </section>
-    </section>
-    <section id="pic-and-nav">
-      <img id="standing_tie" src="./assets/images/standing_tie.jpg">
-      <nav id="nav-list">
-        <a class="nav-links" href="#about">About</a>
-        <a class="nav-links" id="portfolio-nav" href="#portfolio">Portfolio</a>
-        <a class="nav-links" href="#contact">Contact</a>
-      </nav>
-    </section>
-  </section>
+  <header>
+    <h1>Brant Keener</h1>
+    <div>
+      <h2>Full Stack Web Developer</h2>
+      <p class="tagline">Special interest in clean UI, JavaScript, and all things server-side.</p>
+      <p>(Also pretty keen on mudrunning and powerlifting).</p>
+    </div>
+    <img id="standing_tie" src="./assets/images/standing_tie.jpg" alt="Brant in a suit and tie." />
+    <nav class="nav__main">
+      <a class="nav--link" href="#about">About</a>
+      <a class="nav--link" href="#work">Work</a>
+      <a class="nav--link" href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <!-- About section with more about me -->
-  <section class="full-page" class="about">
-    <a id="about"></a>
-    <header>
-      <h2 class="orange-text">
-        About
-      </h2>
-      <nav id="about-nav">
-        <a class="lower-nav" href="#blurb">Top</a>
-        <a class="lower-nav" href="#portfolio">Portfolio</a>
-        <a class="lower-nav" href="#contact">Contact</a>
-      </nav>
-    </header>
-    <section class="about-page-assets">
-      <img class="about-image" src="./assets/images/log_carry.jpg">
-      <section id="paragraphs">
-        <p class="paragraph">
-          I am a full stack developer who recently completed the Denver University Coding Bootcamp program. Throughout the program, I strengthened my skills with 
-          client-side technologies including React, Bootstrap, JavaScript, and jQuery. In addition, I gained
-          skills leveraging server-side technologies including Node.js, express, MongoDB, MySQL, and firebase. 
-          I have a particular passion in working with, and really understanding JavaScript and Node.js. The creativity that web development 
-          allows in both Front-End and Back-End web development make for a very rewarding and interesting career.
-        </p>
-        <p class="paragraph">
-          At this time, I am working as a Medical Laboratory Scientist at the University of Colorado Hospital
-          Anschutz Medical Campus. This work is extremely interesting and rewarding. My current work involves
-          transfusion medicine, and the transfusion of blood products and their derivatives.
-        </p>
-        <p class="paragraph">
-          I also have my Airframe and Powerplant license with an FCC endorsement. I worked as a civilian
-          aircraft electrician in both regional and general aviation.
-        </p>
+  <main>
+    <section id="about">
+      <h3>About</h3>
+      <img src="./assets/images/log_carry.jpg" alt="Brant carrying a log in a mudrun competition." />
+      <p>I am a full stack developer who recently completed the Denver University Coding Bootcamp program. Throughout
+        the program, I strengthened my skills with client-side technologies including React, Bootstrap, JavaScript, and
+        jQuery. In addition, I gained
+        skills leveraging server-side technologies including Node.js, express, MongoDB, MySQL, and firebase. I have a
+        particular passion in working with, and really understanding JavaScript and Node.js. The creativity
+        that web development allows in both Front-End and Back-End web development make for a very rewarding and
+        interesting career.</p>
+      <p>At this time, I am working as a Medical Laboratory Scientist at the University of Colorado Hospital
+        Anschutz Medical Campus. This work is extremely interesting and rewarding. My current work involves
+        transfusion medicine, and the transfusion of blood products and their derivatives.</p>
+      <p>I also have my Airframe and Powerplant license with an FCC endorsement. I worked as a civilian
+        aircraft electrician in both regional and general aviation.</p>
+    </section>
+
+    <!-- Portfolio section -->
+    <section id="work">
+      <h3>Work</h3>
+      <section id="technologies">
+        <p>Technologies</p>
+        <div id="icons__tech"></div>
+      </section>
+      <section>
+        <button id="moveLeft" title="Move to previous project">
+          <i id="left-arrow" class="arrow fas fa-angle-double-left fa-2x"></i>
+        </button>
+        <figure id="card__work">
+          <img id="currentProject" />
+          <figcaption id="currentProjectDescription"></figcaption>
+        </figure>
+        <button id="moveRight">
+          <i id="right-arrow" class="arrow fas fa-angle-double-right fa-2x"></i>
+        </button>
       </section>
     </section>
-  </section>
-
-  <!-- Portfolio section -->
-  <section class="full-page" id="portfolio">
-    <a id="portfolio"></a>
-    <header>
-      <h2 class="orange-text port-head">
-        Portfolio
-      </h2>
-      <nav id="portfolio-sub-nav">
-        <a class="lower-nav" href="#blurb">Top</a>
-        <a class="lower-nav" href="#about">About</a>
-        <a class="lower-nav" href="#contact">Contact</a>
-      </nav>
-    </header>
-    <section id="technologies">
-      <h2 class="tech_head">Technologies</h2>
-      <section id="tech-icons">
-      </section>
+    <!-- The contact page -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <a id="github" href="https://github.com/BrantKeener"><i class="fab fa-github fa-2x"></i></a>
+      <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="mailto:brant.keener@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+      <p>If you're old-school, you can download <a href="./assets/pdf/Resume_Pretty_Brant_Keener.pdf">my resume</a> for
+        offline viewing.</p>
     </section>
-    <!-- The scrollable portfolio area -->
-    <section id="portfolio_card">
-        <section id="card_bin_holder">
-          <button class="port-button" id="move-left" title="Move Cards Left"><i id="left-arrow" class="arrow fas fa-angle-double-left fa-4x"></i></button>
-          <section id="card_bin" class="shadow_it"></section>
-          <button class="port-button" id="move-right" title="Move Cards Right"><i id="right-arrow" class="arrow icon-9x fas fa-angle-double-right fa-4x"></i></button>
-          <section id="desc-div"></section>
-        </section>
-    </section>
-  </section>
-
-
-  <!-- The contact page -->
-  <section class="full-page" class="contact">
-    
-      <section class="contact-card">
-        <header>
-          <h2 class="orange-text">Contact</h2>
-          <nav id="contact-nav">
-            <a class="lower-nav" href="#blurb">Top</a>
-            <a class="lower-nav" href="#about">About</a>
-            <a class="lower-nav" href="#portfolio">Portfolio</a>
-          </nav>
-        </header>
-              <h3 class="contact-blurb">Please feel free to reach out to me on LinkedIn, or via email. </h3>
-              <h3 class="contact-blurb">Take a look at my GitHub, if you would like to see more code.</h3>
-          <section class="external-links">    
-              <a id="github" href="https://github.com/BrantKeener"><i class="fab fa-github fa-9x"></i></a>
-              <a id="linkedin" href="https://linkedin.com/in/brant-keener-68249bb5"><i class="fab fa-linkedin fa-9x"></i></a>
-              <a href="mailto:brant.keener@gmail.com"><i class="far fa-envelope fa-9x"></i></a>
-              <a href="./assets/pdf/Resume_Pretty_Brant_Keener.pdf"><i class="fas fa-file fa-9x"></i></a>
-          </section>
-      </section>
-      <a id="contact"></a>
-  </section>
+  </main>
+  <script src="assets/scripts.js" type="text/javascript"></script>
 </body>
+
 </html>

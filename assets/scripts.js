@@ -1,6 +1,4 @@
-
-let projects = [
-    {
+let projects = [{
         name: 'Gigify',
         state: false,
         technologies: ['./assets/images/bulma-icon.png', './assets/images/html-icon.png', './assets/images/jquery-icon.png', './assets/images/js-icon.png', './assets/images/firebase-icon.png'],
@@ -54,19 +52,19 @@ let portfolioPosition = 0;
 let projectNumber = 0;
 
 // Ensure that the document is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    const flipTechCards = ()=> {
+    const flipTechCards = () => {
         const card = document.getElementsByClassName('flip-card-inner');
         const cards = [...card];
         cards.forEach((card) => {
             card.classList.add('flip-to-back');
         });
     };
-    
+
     const descCardBuild = (proj) => {
-        const descDiv = document.getElementById('desc-div');
-        while(descDiv.firstChild) {
+        const descDiv = document.getElementById('div__desc');
+        while (descDiv.firstChild) {
             descDiv.removeChild(descDiv.firstChild);
         }
         const descPara = document.createElement('p');
@@ -76,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const techDeckBuild = () => {
-        const deckLane = document.getElementById('tech-icons');
+        const deckLane = document.getElementById('icons__tech');
         const currentProj = projects[projectNumber];
         currentProj.technologies.forEach((tech, index) => {
             const flipCard = document.createElement('div');
@@ -107,21 +105,21 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const techDeckClear = () => {
-        const techArea = document.getElementById('tech-icons');
-        while(techArea.firstChild) {
+        const techArea = document.getElementById('icons__tech');
+        while (techArea.firstChild) {
             techArea.removeChild(techArea.firstChild);
         };
     };
 
     (cardDeckBuild = () => {
-        const cardBin = document.getElementById('card_bin');
+        const cardBin = document.getElementById('card__work');
         projects.forEach((project, index) => {
             const card = document.createElement('a');
             const img = document.createElement('img');
             img.src = project.card_image_link;
             img.alt = project.name;
             img.className = 'cards';
-            if(index === 0 || index === 5) {
+            if (index === 0 || index === 5) {
                 card.setAttribute('data-active', project.state);
             };
             card.href = project.url;
@@ -129,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             card.id = `project${index}`;
             card.target = '_blank';
             card.rel = 'noopener noreferrer';
-            card.style.left ='0px';
+            card.style.left = '0px';
             card.append(img);
             cardBin.appendChild(card);
         });
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const endProjActive = endProject.getAttribute('data-active');
         const projectCards = document.getElementsByClassName('project_card');
         // Moving to the right sets the left hand bookend data-active to false
-        if(direction === 'right' && endProjActive !== 'true') {
+        if (direction === 'right' && endProjActive !== 'true') {
             techDeckClear();
             startProject.setAttribute('data-active', false);
             portfolioPosition -= imgWidth;
@@ -159,8 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.left = positioner;
             };
             techDeckBuild();
-        // Moving to the left sets the right hand bookend data-active to false
-        } else if(direction === 'left' && startProjActive !== 'true') {
+            // Moving to the left sets the right hand bookend data-active to false
+        } else if (direction === 'left' && startProjActive !== 'true') {
             techDeckClear();
             endProject.setAttribute('data-active', false);
             portfolioPosition += imgWidth;
@@ -172,10 +170,10 @@ document.addEventListener('DOMContentLoaded', function() {
             techDeckBuild();
         };
         // This evaluation will set either end data-active as true if the parameters are met.
-        if(portfolioPosition === 0) {
+        if (portfolioPosition === 0) {
             startProject.setAttribute('data-active', true);
         };
-        if(portfolioPosition === stopWidth) {
+        if (portfolioPosition === stopWidth) {
             endProject.setAttribute('data-active', true);
         };
     };
@@ -183,44 +181,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event delegator for mouse clicks
     document.addEventListener('click', event => {
         let listen = '';
-        if(event.target.className.baseVal) {
+        if (event.target.className.baseVal) {
             listen = event.target.className.baseVal;
         } else {
             listen = event.target.id;
         };
-        switch(listen) {
-            case 'move-right':
+        switch (listen) {
+            case 'moveRight':
             case 'right-arrow':
-            moveCards('right');
-            break;
-            case 'move-left':
+                moveCards('right');
+                break;
+            case 'moveLeft':
             case 'left-arrow':
-            moveCards('left');
-            break;
+                moveCards('left');
+                break;
         };
     });
 
     // Event handler for mouseenter
-    document.getElementById('card_bin').addEventListener('mouseenter', () => {
-        let descDiv = document.getElementById('desc-div');
+    document.getElementById('card__work').addEventListener('mouseenter', () => {
+        let descDiv = document.getElementById('div__desc');
         descDiv.style.opacity = 1;
     });
 
     // Event handler for mouseleave
-    document.getElementById('card_bin').addEventListener('mouseleave', () => {
-        let descDiv = document.getElementById('desc-div');
+    document.getElementById('card__work').addEventListener('mouseleave', () => {
+        let descDiv = document.getElementById('div__desc');
         descDiv.style.opacity = 0;
     });
 
     // Event handler for mouseenter
-    document.getElementById('desc-div').addEventListener('mouseenter', () => {
-        let descDiv = document.getElementById('desc-div');
+    document.getElementById('div__desc').addEventListener('mouseenter', () => {
+        let descDiv = document.getElementById('div__desc');
         descDiv.style.opacity = 1;
     });
 
-    // Event handler for mouseleave. This one allow desc-div to disappear if the user leaves desc-div from the side.
-    document.getElementById('desc-div').addEventListener('mouseleave', () => {
-        let descDiv = document.getElementById('desc-div');
+    // Event handler for mouseleave. This one allow div__desc to disappear if the user leaves div__desc from the side.
+    document.getElementById('div__desc').addEventListener('mouseleave', () => {
+        let descDiv = document.getElementById('div__desc');
         descDiv.style.opacity = 0;
     });
 
@@ -229,55 +227,37 @@ document.addEventListener('DOMContentLoaded', function() {
         const yOffset = window.pageYOffset;
         const height = window.innerHeight;
         const about = document.getElementById('about').offsetTop;
-        const portfolio = document.getElementById('portfolio').offsetTop;
+        const portfolio = document.getElementById('work').offsetTop;
         const contact = document.getElementById('contact').offsetTop;
-        if(yOffset > about - 50) {
-            document.getElementById('about-nav').style.opacity = 1;
-        };
-        if(yOffset > portfolio - 50) {
-            document.getElementById('portfolio-sub-nav').style.opacity = 1;
-        }; 
-        if(yOffset > contact -50) {
-            document.getElementById('contact-nav').style.opacity = 1;
-        };
-        if(yOffset < about - 25) {
-            document.getElementById('about-nav').style.opacity = 0;
-        };
-        if(yOffset < portfolio - 25) {
-            document.getElementById('portfolio-sub-nav').style.opacity = 0;
-        }; 
-        if(yOffset < contact - 25) {
-            document.getElementById('contact-nav').style.opacity = 0;
-        };
     });
 
-    document.getElementById('card_bin').addEventListener('scroll', () => {
-        const xOffset = document.getElementById('card_bin').offsetLeft;
-        const cardWidth = document.getElementById('card_bin').offsetWidth;
+    document.getElementById('card__work').addEventListener('scroll', () => {
+        const xOffset = document.getElementById('card__work').offsetLeft;
+        const cardWidth = document.getElementById('card__work').offsetWidth;
         const xPosition = document.getElementsByClassName('cards')[0].x;
-        if(window.innerWidth <= 1150) {
-            document.getElementById('desc-div').style.opacity = 1;
-            if(xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .9))) {
+        if (window.innerWidth <= 1150) {
+            document.getElementById('div__desc').style.opacity = 1;
+            if (xPosition <= (xOffset) && xPosition >= (xOffset - (cardWidth * .9))) {
                 projectNumber = 0;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * .9) && xPosition >= (xOffset - (cardWidth * 1.8))) {
+            } else if (xOffset - (cardWidth * .9) && xPosition >= (xOffset - (cardWidth * 1.8))) {
                 projectNumber = 1;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 1.8) && xPosition >= (xOffset - (cardWidth * 3.1))) {
+            } else if (xOffset - (cardWidth * 1.8) && xPosition >= (xOffset - (cardWidth * 3.1))) {
                 projectNumber = 2;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 3.1) && xPosition >= (xOffset - (cardWidth * 4.2))) {
+            } else if (xOffset - (cardWidth * 3.1) && xPosition >= (xOffset - (cardWidth * 4.2))) {
                 projectNumber = 3;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 4.2) && xPosition >= (xOffset - (cardWidth * 5.3))) {
+            } else if (xOffset - (cardWidth * 4.2) && xPosition >= (xOffset - (cardWidth * 5.3))) {
                 projectNumber = 4;
                 techDeckClear();
                 techDeckBuild();
-            } else if(xOffset - (cardWidth * 5.3) && xPosition >= (xOffset - (cardWidth * 6))) {
+            } else if (xOffset - (cardWidth * 5.3) && xPosition >= (xOffset - (cardWidth * 6))) {
                 projectNumber = 5;
                 techDeckClear();
                 techDeckBuild();
